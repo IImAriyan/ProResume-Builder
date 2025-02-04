@@ -1,1 +1,23 @@
-<p>header works!</p>
+<header class="w-full p-10 py-5">
+  <nav class="flex justify-between items-center">
+    <div class="flex gap-2" dir="rtl">
+      <button class="bg-blue-500 transition-all text-[0.8rem] duration-300 hover:bg-blue-400 hover:cursor-pointer p-4 px-8 text-white yekanbakh rounded-2xl">ثبت نام</button>
+      <button class=" border-1 border-blue-200 text-[0.8rem] transition-all duration-300 hover:border-blue-400 hover:cursor-pointer p-4 px-8  yekanbakh rounded-2xl">تماس با ما</button>
+    </div>
+    <div class="flex gap-10 yekanbakh text-gray-600  " dir="rtl">
+      @for (item of [
+        {title:'خانه', routerLink:'/landing'},
+        {title:'ساخت رزومه', routerLink:'/dashboard'},
+        {title:'رزومه ها', routerLink:'/resumes'},
+        {title:'تماس با ما', routerLink:'/contact-us'},
+        {title:'درباره ما', routerLink:'/about-us'}
+
+      ]; track item) {
+        <h1 [routerLink]="[item.routerLink]"  >{{item.title}}</h1>
+      }
+    </div>
+    <div>
+      <img src="assets/images/website/cv.png" class="size-[5rem]" alt="">
+    </div>
+  </nav>
+</header>
