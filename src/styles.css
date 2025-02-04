@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 @layer base {
+  @font-face {
+    font-family: yekanbakh;
+    src: url("assets/fonts/YekanBakh.woff");
+  }
   body {
     margin: 0;
+  }
+
+  .yekanbakh {
+    font-family: yekanbakh;
   }
 }
